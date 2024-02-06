@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+// ===============form_first_css_starts===============
+.create_account{
+    height: 100vh;
+}
+.creating_form_main{
+    width: calc(100%);
+    max-width: calc(100%);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 100%;
+    
+}
+.create_left{
+    width: calc(35%);
+    max-width: calc(35%);
+    border: 1px solid;
+    background-image: url(../../../../assets/image/37afd6af-d8be-4fb5-9ea4-f120c83fabee.jpeg);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.left_side_data{
+    background-color: #0F1E57;
+    height: 100%;
+    opacity: 80%;
+}
+.create_right{
+    width: calc(64%);
+    max-width: calc(64%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.create_account_form{
+    width: calc(480px);
+    max-width: calc(480px);
+    padding: 10px;
+    box-shadow: rgba(48, 50, 51, 0.2) 0px 8px 24px;
+    border-radius: 10px;
+
+}
+.form_input_main{
+    margin: 20px 0px;
+}
+.dark_input{
+    height: 40px;
+    width: 100%;
+    outline: none;
+    border: 2px solid rgba(87, 85, 85, 0.34);;
+    border-radius: 5px;
+}
+.login_buttn button{
+    width: 100%;
+    height: 45px;
+    background-color: #179BD6;
+    color: #ffffff;
+    border-radius: 40px;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+.login_buttn button:hover{
+    background-color: #0F1E57;
+}
+.create_account_form h2{
+    text-align: center;
+}
+.left_side_data h1{
+    color: #ffffff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.left_side_data{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+}
+.fc_red{
+    color: red;
+}
+.para_neo{
+    color: #ffffff;
+}
+.paypal_lists{
+    display: flex;
+    justify-content: space-between;
+}
+.paypal_lists li a{
+    color: #ffffff;
+}
+.form_input_main input::placeholder{
+    padding-left: 5px;
+}
+.err{
+    color: red;
+}
+.is-invalid{
+    border: red;
+}
+//================= Ends===============
+
+@media screen and (max-width:992px){
+    .create_left{
+        display: none;
+    }
+    .create_right{
+        width: calc(100%);
+        max-width: calc(100%);
+    }
+}
+
+@media screen and (max-width:500px){
+    .create_account_form{
+        width: calc(400px);
+        max-width: calc(400px);
+    }
+}
+@media screen and (max-width:425px){
+    .create_account_form{
+        width: calc(320px);
+        max-width: calc(320px);
+    }
+}

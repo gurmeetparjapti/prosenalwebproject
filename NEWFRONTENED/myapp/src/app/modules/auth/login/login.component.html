@@ -1,0 +1,56 @@
+<div class="form_layer">
+    <div class="login_form_main">
+        <div class="sphere"></div>
+        <div class="google"></div>
+        <div class="login_form_image">
+            <img src="https://cdn-icons-png.flaticon.com/128/14511/14511952.png" width="100px" alt="login_image">
+        </div>
+        <h2 class="text-center mb-3 mt-2">Stack Find Over</h2>
+        <form [formGroup]="mylogin">
+            <div class="form_input_title">
+                <h4 class="pb-3">Sign in to your account</h4>
+            </div>
+            <div class="form_input">
+                <label>Enter your Email:**</label>
+                <input type="text" name="" placeholder="Enter Your Email" class="dark_input"[ngClass]="{'is-invalid':submitted && f.user_email.errors}"
+                    formControlName="user_email" >
+                <div *ngIf="submitted && f.user_email.errors">
+                    <section *ngIf="submitted && f.user_email.errors" class="errormsg">
+                        <span *ngIf="f.user_email.errors.required" class="g-0 err">user_email not required</span>
+                        <span *ngIf="f.user_email.errors.pattern" class="g-0 err">
+                            please enter the valid Email
+                        </span>
+                    </section>
+                </div>
+            </div>
+            <div class="form_input">
+                <label>Enter your Password:**</label>
+                <input type="password" name="" placeholder="Enter Your Password" class="dark_input"
+                    formControlName="user_pass" [ngClass]="{'is-invalid':submitted && f.user_pass.errors}">
+                    <div *ngIf="submitted && f.user_pass.errors">
+                        <section *ngIf="submitted && f.user_pass.errors" class="errormsg">
+                            <span *ngIf="f.user_pass.errors.required" class="g-0 err">user_pass not required</span>
+                        </section>
+                    </div>
+            </div>
+            <div class="stay_login">
+                <div class="log_forget">
+                    <input type="checkbox" name="checkbox" class="login_check" formControlName="ecceptTerm" [ngClass]="{'is-invalid':submitted && f.checkbox.errors}">&nbsp;&nbsp;<span class="logged_in">Stay
+                        Logged In ??</span>
+                        <div *ngIf="submitted && f.ecceptTerm.errors">
+                            <section *ngIf="submitted && f.ecceptTerm.errors" class="errormsg">
+                                <div *ngIf="f.ecceptTerm.errors.required" class="g-0 errormsg">checkbox not required</div>
+                            </section>
+                        </div>
+                </div>
+                <div class="log_forget">
+                    <a href="#" [routerLink]="['forget']">Forgotten account ??</a>
+                </div>
+            </div>
+            <button type="button" class="learnmore mt-3 p-1" (click)="OnSubmit()">submit</button>
+            <div class="create_account mt-3">
+                <p>Not a member ??</p><span><a href="#" [routerLink]="['create']">Create Account</a></span>
+            </div>
+        </form>
+    </div>
+</div>

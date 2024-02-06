@@ -1,0 +1,89 @@
+<section class="create_account">
+    <div class="creating_form_main">
+        <div class="create_left">
+            <div class="left_side_data">
+                <h1>MOB <span class="fc_red">
+                        <>
+                    </span> CODER</h1>
+                <p class="para_neo">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident eaque molestias
+                    quidem hic aspernatur distinctio enim animi impedit maxime beatae!</p>
+                <ul class="paypal_lists">
+                    <li><a href="#">#2016 Paypal</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Legal</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="create_right">
+            <div class="create_account_form" id="demoOne">
+                <h2>Create and account</h2>
+                <form [formGroup]="myform">
+                    <div class="form_input_main">
+                        <label>Username:**</label>
+                        <input type="text" name="" placeholder="Enter Username" class="dark_input" autocomplete="off"
+                            formControlName="Username" [ngClass]="{'is-invalid':submitted && f.Username.errors}" [maxlength]="maxInputLength">
+                        <div *ngIf="submitted && f.Username.errors">
+                            <section *ngIf="submitted && f.Username.errors" class="errormsg">
+                                <span *ngIf="f.Username.errors.required" class="g-0 err">Username is required</span>
+                                <span *ngIf="f.Username.errors.maxlength" class="g-0 err">Username is maxlenth 25</span>
+                                <span *ngIf="f.Username.errors.minlength" class="g-0 err">Username is minlength 1</span>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="form_input_main">
+                        <label>Email:**</label>
+                        <input type="text" name="" placeholder="Enter Email" class="dark_input" autocomplete="off"[ngClass]="{'is-invalid':submitted && f.user_email.errors}"
+                            formControlName="user_email">
+                            <div *ngIf="submitted && f.user_email.errors">
+                                <section *ngIf="submitted && f.user_email.errors" class="errormsg">
+                                    <span *ngIf="f.user_email.errors.required" class="g-0 err">user_email is required</span>
+                                    <span *ngIf="f.user_email.errors.maxlength" class="g-0 err">user_email is maxlenth 25</span>
+                                    <span *ngIf="f.user_email.errors.pattern" class="g-0 err">user_email not valid</span>
+                                </section>
+                            </div>
+                    </div>
+                    <div class="form_input_main">
+                        <label>Phone:**</label>
+                        <input type="text" name="" placeholder="Enter Phone" class="dark_input" autocomplete="off"[ngClass]="{'is-invalid':submitted && f.phone_no.errors}"
+                            formControlName="phone_no"  [maxlength]="phone_lenght">
+                            <div *ngIf="submitted && f.phone_no.errors">
+                                <section *ngIf="submitted && f.phone_no.errors" class="errormsg">
+                                    <span *ngIf="f.phone_no.errors.required" class="g-0 err">phone_no is required</span>
+                                    <span *ngIf="f.phone_no.errors.pattern" class="g-0 err">phone_no is not valid</span>
+                                </section>
+                            </div>
+                    </div>
+                    <div class="form_input_main">
+                        <label>Passowrd:**</label>
+                        <input type="text" name="" placeholder="Enter Passowrd" class="dark_input" autocomplete="off"
+                            formControlName="user_pass" [ngClass]="{'is-invalid':submitted && f.user_pass.errors}">
+                            <div *ngIf="submitted && f.user_pass.errors">
+                                <section *ngIf="submitted && f.user_pass.errors" class="errormsg">
+                                    <span *ngIf="f.user_pass.errors.required" class="g-0 err">user_pass is required</span>
+                                    <span *ngIf="f.user_pass.errors.maxlength" class="g-0 err">user_pass is maxlenth 25</span>
+                                    <span *ngIf="f.user_pass.errors.minlength" class="g-0 err">user_pass is minlength 8</span>
+                                </section>
+                            </div>
+                    </div>
+                    <div class="form_input_main">
+                        <label>Confirm Password:**</label>
+                        <input type="text" name="" placeholder="Enter Repassword" class="dark_input" autocomplete="off"
+                            formControlName="user_repass" [ngClass]="{'is-invalid':submitted && f.user_repass.errors}">
+                            <div *ngIf="submitted && f.user_repass.errors"> 
+                                <section *ngIf="submitted && f.user_repass.errors" class="errormsg">
+                                    <span *ngIf="f.user_repass.errors.required" class="g-0 err">user_repass is required</span>
+                                    <span *ngIf="f.user_repass.errors.maxlength" class="g-0 err">user_repass is maxlenth 25</span>
+                                    <span *ngIf="f.user_repass.errors.minlength" class="g-0 err">user_repass is minlength 8</span>
+                                </section>
+                            </div>
+                    </div>
+                    <div class="login_buttn">
+                        <button type="button" (click)="onsubmit()">Submit</button>
+                    </div>
+                    <br>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
