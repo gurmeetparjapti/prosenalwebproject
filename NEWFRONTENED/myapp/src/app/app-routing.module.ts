@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminlayoutComponent } from './layout/adminlayout/adminlayout.component';
 import { BlankpageComponent } from './layout/blankpage/blankpage.component';
 import { FullpageComponent } from './layout/fullpage/fullpage.component';
 
@@ -17,7 +18,7 @@ const routes: Routes = [
       },
       {
         path:'dashboard',
-        component:FullpageComponent,
+        component:AdminlayoutComponent,
         loadChildren: ()=> import('./modules/dashboard/dashboard.module').then(m=>m.DashboardModule)
       },
       {

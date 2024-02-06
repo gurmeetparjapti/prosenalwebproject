@@ -1,0 +1,94 @@
+
+
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+       [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+       <mat-toolbar class="mt-5"><img src="../../.././assets/image/DREAM'.png" alt="" srcset="" height="150px" ></mat-toolbar>
+       <mat-nav-list class="mt-5">
+          <a mat-list-item routerLink="/dashboard"><i class="fa fa-home me-1" aria-hidden="true"></i>Home</a>
+          <mat-expansion-panel class="mt-2">
+             <mat-expansion-panel-header>
+                <mat-panel-title><i class="fa fa-sign-in me-1" aria-hidden="true"></i>Event</mat-panel-title>
+             </mat-expansion-panel-header>
+             <mat-nav-list>
+                <a mat-list-item routerLink="/auth"><i class="fa fa-sign-in me-1 " aria-hidden="true"></i>login</a>
+             </mat-nav-list>
+          </mat-expansion-panel>
+          <a mat-list-item routerLink="/dashboard"><i class="fa fa-dashboard" aria-hidden="true"></i> dashboard</a>
+ 
+          <a mat-list-item routerLink="apidata"><i class="fa fa-globe me-1" aria-hidden="true"></i>Api_data</a>
+          <mat-expansion-panel class="mt-2">
+             <mat-expansion-panel-header>
+                <mat-panel-title><i class="fa fa-tachometer" aria-hidden="true"></i>Dropdown</mat-panel-title>
+             </mat-expansion-panel-header>
+             <mat-nav-list>
+                <a mat-list-item> <i class="fa fa-pie-chart me-2"
+                      aria-hidden="true"></i>Analytics</a>
+                <a mat-list-item  routerLink="blog"><i class="fa fa-rss-square me-2" aria-hidden="true"></i>
+                   Blog's</a>
+                <a mat-list-item routerLink="contact"><i class="fa fa-address-card" aria-hidden="true"></i>Contact-us</a>
+ 
+             </mat-nav-list>
+          </mat-expansion-panel>
+          <a mat-list-item routerLink="carrer" class="link"><i class="fa fa-calendar-o me-1"
+                aria-hidden="true"></i>Career <span class="badge text-bg-info  ms-5">new</span></a>
+          <a mat-list-item routerLink="/indexpage" class="link"><i class="fa fa-comments me-1"
+                aria-hidden="true"></i>Other-app</a>
+       </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+       <mat-toolbar color="primary">
+          <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+             *ngIf="isHandset$ | async">
+             <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+          </button>
+          <span> <mat-icon class="m-0">eco</mat-icon>DREAMHOST</span>
+          <span class="exapmle-spacer"></span>
+          <button  class="btn btn-success" [routerLink]="['../../auth/login']" style="background-color: rgb(4, 238, 4);"
+             >Login</button>
+       </mat-toolbar>
+       <div class="icon">
+          <marquee direction="left" scrolldelay="3">
+             <h4 class="title">
+                <span class="title-word title-word-1"><img
+                      src="https://code.visualstudio.com/assets/images/code-stable-white.png" alt="" width="40px"></span>
+                <span class="title-word title-word-1"> This</span>
+                <span class="title-word title-word-2"> is</span>
+                <span class="title-word title-word-3"> Angular</span>
+                <span class="title-word title-word-4"> Website</span>
+             </h4>
+          </marquee>
+          
+       </div>
+ 
+       <router-outlet></router-outlet>
+    </mat-sidenav-content>
+ </mat-sidenav-container>
+ 
+ 
+ 
+ 
+ 
+ 
+ <!-- 
+       <mat-toolbar color="primary">
+          <button mat-icon-button (click)="drawer.toggle()">
+             <mat-icon>
+                menu
+             </mat-icon>
+          </button>
+          <span><mat-icon class="m-0">eco</mat-icon> Matrial ui tutorial</span>
+          <span class="exapmle-spacer"></span>
+          <button mat-button>menu</button>
+          <button [matMenuTriggerFor]="lvl1master" mat-button>menu</button>
+          <mat-menu #lvl1master="matMenu">
+             <button mat-menu-item>menu</button>
+             <button mat-menu-item>menu</button>
+          </mat-menu>
+          <button mat-button>menu</button>
+       </mat-toolbar>
+       <mat-drawer-container class="example-container" autosize>
+          <mat-drawer #drawer class="example-sidenav" mode="side">
+             <p>Auto-resizing sidenav</p>
+          </mat-drawer>
+          -->

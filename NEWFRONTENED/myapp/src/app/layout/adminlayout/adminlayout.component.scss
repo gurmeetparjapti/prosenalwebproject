@@ -1,0 +1,130 @@
+.containt{
+    width: 100%;
+  }
+  .title-word {
+    animation: color-animation 4s linear infinite;
+  }
+  .exapmle-spacer{
+    flex: 1 1 auto;
+  }
+  *{
+    box-sizing: border-box;
+  }
+  
+  .example-container {
+  
+    height: 100%;
+    border: 1px solid #555;
+  }
+  
+  .title-word-1 {
+    --color-1: #DF8453;
+    --color-2: #3D8DAE;
+    --color-3: #E4A9A8;
+  }
+  
+  .title-word-2 {
+    --color-1: #DBAD4A;
+    --color-2: #ACCFCB;
+    --color-3: #17494D;
+  }
+  
+  .title-word-3 {
+    --color-1: #ACCFCB;
+    --color-2: #E4A9A8;
+    --color-3: #ACCFCB;
+  }
+  
+  .title-word-4 {
+    --color-1: #3D8DAE;
+    --color-2: #DF8453;
+    --color-3: #E4A9A8;
+  }
+  
+  @keyframes color-animation {
+    0%    {color: var(--color-1)}
+    32%   {color: var(--color-1)}
+    33%   {color: var(--color-2)}
+    65%   {color: var(--color-2)}
+    66%   {color: var(--color-3)}
+    99%   {color: var(--color-3)}
+    100%  {color: var(--color-1)}
+  }
+  
+  /* Here are just some visual styles. 🖌 */
+  
+  .title {
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .sidenav-container {
+    height: 100%;
+  }
+  
+  .bd-placeholder-img{
+    height: 150px !important;
+  }
+  
+  .thbtn{
+    position: absolute;
+    right: 5px;
+    top: 70px; 
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+  }
+  
+  .sidenav {
+    width: 250px;
+  }
+  
+  .sidenav .mat-toolbar {
+    background: inherit;
+  }
+  
+  .mat-toolbar.mat-primary {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  
+  .myapp
+  {
+      width:300px;
+      height: auto;
+      position: absolute;
+      right: 20px;
+      top:110px;
+      z-index: 999;
+      border-radius: 10px;
+      background-color: #ACCFCB;
+      overflow:-moz-hidden-unscrollable;
+  }
+  @media (max-width: 576px) {
+    span{
+      margin-right: 14px;
+      margin-top: -8px;
+    }
+    .fa-th{
+        position: absolute;
+        top: 4px;
+        right: 3px;
+    }
+  }
+  .border-bottom{
+    border-bottom: 7px solid red !important;
+    height: 10px !important; 
+    border: aqua !important;
+    background-color: white;
+    
+  }
+  .fa-instagram{
+    color: red;
+  }
+  .fa-linkedin{
+    color: #02a6ec;
+  }
+  .fa-github{
+    color: black;
+  }
