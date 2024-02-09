@@ -38,13 +38,13 @@
     </mat-sidenav>
     <mat-sidenav-content>
        <mat-toolbar color="primary">
-          <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+          <button type="button" class="btn btn-primary" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
              *ngIf="isHandset$ | async">
-             <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+             <i class="fa fa-bars" aria-hidden="true"></i>
           </button>
           <span> <mat-icon class="m-0">eco</mat-icon>DREAMHOST</span>
           <span class="exapmle-spacer"></span>
-          <button  class="btn btn-success" [routerLink]="['../../auth/login']" style="background-color: rgb(4, 238, 4);"
+          <button  class="btn btn-success" [routerLink]="['../auth']" style="background-color: rgb(4, 238, 4);"
              >Login</button>
        </mat-toolbar>
        <div class="icon">

@@ -12,6 +12,8 @@ import { AppComponent } from './app.component';
 import { AdminlayoutComponent } from './layout/adminlayout/adminlayout.component';
 import { BlankpageComponent } from './layout/blankpage/blankpage.component';
 import { FullpageComponent } from './layout/fullpage/fullpage.component';
+import { NavbarComponent } from './sharecomponent/navbar/navbar.component';
+import { FooterComponent } from './sharecomponent/footer/footer.component';
 
 
 
@@ -20,7 +22,7 @@ import { FullpageComponent } from './layout/fullpage/fullpage.component';
     AppComponent,
     BlankpageComponent,
     FullpageComponent,
-    AdminlayoutComponent,
+    AdminlayoutComponent,NavbarComponent, FooterComponent
  
   ],
   imports: [

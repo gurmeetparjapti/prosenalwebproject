@@ -75,9 +75,10 @@ router.get("/singledatas/:id",async(req,res)=>{
 
 //login authentication 
 router.post("/login", async(req,res)=>{
-    const {user_email,user_pass} = req.body;
+    const {user_email, user_pass} = req.body;
     if(!user_email || !user_pass ){
         return res.status(422).json({error:"user and pass no dont match"});
+        
     }
     else{
         // const a = await users.findOne({email:email});
@@ -90,6 +91,7 @@ router.post("/login", async(req,res)=>{
         // {
         //     return res.status(244).json({error:'plese valid email user and password'});
         // }
+       
         const uservalidation = await users.findOne({user_email:user_email});
         console.log(uservalidation);
         if(uservalidation){

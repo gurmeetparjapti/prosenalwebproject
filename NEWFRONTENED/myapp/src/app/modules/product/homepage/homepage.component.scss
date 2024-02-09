@@ -1,0 +1,199 @@
+//================ banner-section ===============/
+.homepage_new_banner {
+  background-image: url(https://ziyyara.com/home-img.d208b6bb9ca305de.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.banner_inside {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.transforming_ideas {
+  width: calc(98% / 2);
+  max-width: calc(98% / 2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  padding: 70px 0px;
+}
+.thesis_writing {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.thesis_writing p {
+  border: 1px solid;
+  padding: 5px 10px;
+  border-radius: 0.3rem;
+  margin-right: 14px;
+  font-weight: 500;
+  color: #2b2828;
+  margin-top: 15px;
+}
+.thesis_writing p a {
+  text-decoration: none;
+  color: #000000;
+  padding: 0px 2px;
+}
+.thesis_head {
+  margin: 50px 0px;
+}
+.thesis_writing button {
+  height: 40px;
+  background-color: #00b5a9;
+  border: none;
+  border-radius: 0.3rem;
+  color: #ffffff;
+  font-weight: 500;
+  padding: 4px 12px;
+  margin-top: 20px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+    0 16px 16px rgba(0, 0, 0, 0.12);
+}
+.Line_text {
+  color: #ffffff;
+}
+
+.typewriter {
+  width: 22.5ch;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 35px;
+  color: #fff;
+  border-right: 4px solid #fff;
+  animation: cursor 2s step-start infinite, text 5s steps(20) alternate infinite;
+}
+
+@keyframes cursor {
+  0%,
+  100% {
+    border-color: #fff;
+  }
+}
+
+@keyframes text {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 22.5ch;
+  }
+}
+
+.whatsapp_icon {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 4000;
+}
+
+.whatsapp_icon a {
+  color: #fff;
+  text-decoration: none;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ font-size: 30px;
+}
+
+// ===========our-pricing's css starts==============
+.our_pricing {
+  margin-top: 50px;
+}
+.all_pricing {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.boxes {
+  width: calc(90% / 4);
+  max-width: calc(90% / 4);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.main_box {
+  overflow: hidden;
+  position: relative;
+}
+.bottm_slide {
+  position: absolute;
+  height: 40px;
+  width: 100%;
+  background-color: #00000069;
+  bottom: -40px;
+}
+.boxes:hover .bottm_slide {
+  bottom: 0 !important;
+  transition: 0.5s ease;
+}
+.image_two {
+  display: none;
+}
+.boxes:hover .image_two {
+  display: block !important;
+}
+.boxes:hover .image_one {
+  display: none !important;
+}
+.boxes img:hover {
+  transform: scale(1.05);
+  transition: 0.3s ease-in;
+}
+.boxes h2 {
+  text-align: center;
+  margin-top: 10px;
+}
+.boxes p {
+  color: #878a99;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+}
+.rate {
+  color: #ff6347;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: line-through;
+}
+.whatsapp_icon {
+    animation: UpDown 1s linear infinite;
+     cursor: pointer;
+     color: #715c3f;
+  
+  }
+  
+  @keyframes UpDown {
+    0% {
+      bottom: 0;
+    }
+    50% {
+      bottom: .5em;
+    }
+    100% {
+      bottom: 0;
+    }
+  }

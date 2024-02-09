@@ -39,8 +39,6 @@
             "scripts": [
               "jquery/dist/jquery.min.js",
               "bootstrap/dist/js/bootstrap.bundle.js","sweetalert2/dist/sweetalert2.js"
-             
-             
             ]
           },
           "configurations": {

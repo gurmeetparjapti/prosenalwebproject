@@ -12,7 +12,7 @@
             </div>
             <div class="form_input">
                 <label>Enter your Email:**</label>
-                <input type="text" name="" placeholder="Enter Your Email" class="dark_input"[ngClass]="{'is-invalid':submitted && f.user_email.errors}"
+                <input type="text" name="" placeholder="Enter Your Email" class="dark_input" [ngClass]="{'is-invalid':submitted && f.user_email.errors}"
                     formControlName="user_email" >
                 <div *ngIf="submitted && f.user_email.errors">
                     <section *ngIf="submitted && f.user_email.errors" class="errormsg">
