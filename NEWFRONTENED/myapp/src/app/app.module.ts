@@ -12,17 +12,18 @@ import { AppComponent } from './app.component';
 import { AdminlayoutComponent } from './layout/adminlayout/adminlayout.component';
 import { BlankpageComponent } from './layout/blankpage/blankpage.component';
 import { FullpageComponent } from './layout/fullpage/fullpage.component';
-import { NavbarComponent } from './sharecomponent/navbar/navbar.component';
+import { ContactUsComponent } from './sharecomponent/contact-us/contact-us.component';
 import { FooterComponent } from './sharecomponent/footer/footer.component';
-
-
-
+import { NavbarComponent } from './sharecomponent/navbar/navbar.component';
 @NgModule({
   declarations: [
     AppComponent,
     BlankpageComponent,
     FullpageComponent,
-    AdminlayoutComponent,NavbarComponent, FooterComponent
+    AdminlayoutComponent,
+    NavbarComponent,
+     FooterComponent,
+     ContactUsComponent
  
   ],
   imports: [

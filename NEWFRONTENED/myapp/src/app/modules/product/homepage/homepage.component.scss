@@ -90,7 +90,6 @@
     width: 22.5ch;
   }
 }
-
 .whatsapp_icon {
   position: fixed;
   display: flex;
@@ -98,8 +97,8 @@
   align-items: center;
   width: 60px;
   height: 60px;
-  bottom: 40px;
-  right: 40px;
+  bottom: 70px;
+  right: 60px;
   background-color: #25d366;
   border-radius: 50px;
   text-align: center;
@@ -111,10 +110,13 @@
 .whatsapp_icon a {
   color: #fff;
   text-decoration: none;
- display: flex;
- justify-content: center;
- align-items: center;
- font-size: 30px;
+
+}
+
+.whatsapp_icon {
+  animation: UpDown 1s linear infinite;
+  cursor: pointer;
+  color: #715c3f;
 }
 
 // ===========our-pricing's css starts==============

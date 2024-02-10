@@ -1,0 +1,30 @@
+.map-container-section {
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+  }
+  .map-container-section iframe {
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+  }
+  .learnmore{
+    width: 120px;
+    border: none;
+    height: 40px;
+    border-radius: 0.2rem;
+    color: #ffffff;
+    background-color: #E53231;
+}
+.learnmore:hover{
+    background-color: #00B5A9;
+}
+.view{
+    background-image: url('../../../assets/image/website-page-contact-us-email-600nw-1958537320.webp');
+     background-repeat: no-repeat; 
+     background-size:cover;
+      background-position: center center;
+}
