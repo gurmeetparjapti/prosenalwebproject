@@ -12,6 +12,8 @@ export class CreateaccountComponent implements OnInit {
   submitted: boolean = false;
   maxInputLength: number = 25;
   phone_lenght: number = 10;
+  alert: boolean | undefined;
+  formbuilder: any;
   constructor(private myservice: ServiceService) {}
 
   myform = new FormGroup({
@@ -19,6 +21,7 @@ export class CreateaccountComponent implements OnInit {
       Validators.required,
       Validators.maxLength(25),
       Validators.minLength(2),
+      Validators.pattern('([A-Z]){1}([a-z])*$')
     ]),
     user_email: new FormControl('', [
       Validators.required,
@@ -42,11 +45,14 @@ export class CreateaccountComponent implements OnInit {
 
   //pass match to
 
+  ///validation wor
+  ngOnInit(): void {
+  
+  }
+
   get f(): any {
     return this.myform.controls;
   }
-
-  ngOnInit(): void {}
   onsubmit() {
     this.submitted = true;
     if (this.myform.invalid) {
@@ -80,5 +86,8 @@ export class CreateaccountComponent implements OnInit {
       title: 'Oops...',
       text: 'Something went wrong!',
     });
+  }
+  closeAlert() {
+    this.alert = false;
   }
 }

@@ -1,5 +1,6 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
@@ -15,6 +16,7 @@ import { FullpageComponent } from './layout/fullpage/fullpage.component';
 import { ContactUsComponent } from './sharecomponent/contact-us/contact-us.component';
 import { FooterComponent } from './sharecomponent/footer/footer.component';
 import { NavbarComponent } from './sharecomponent/navbar/navbar.component';
+import { ServicepageComponent } from './sharecomponent/servicepage/servicepage.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,12 +25,14 @@ import { NavbarComponent } from './sharecomponent/navbar/navbar.component';
     AdminlayoutComponent,
     NavbarComponent,
      FooterComponent,
-     ContactUsComponent
+     ContactUsComponent,
+     ServicepageComponent
  
   ],
   imports: [
     BrowserModule,MatIconModule,MatSidenavModule,MatToolbarModule,MatListModule,
     AppRoutingModule,HttpClientModule, BrowserAnimationsModule,MatExpansionModule
+    ,ReactiveFormsModule,FormsModule
     
   ],
   providers: [],

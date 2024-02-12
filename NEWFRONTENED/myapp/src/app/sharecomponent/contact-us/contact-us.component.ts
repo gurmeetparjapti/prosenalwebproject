@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-contact-us',
@@ -7,11 +7,17 @@ import { FormGroup } from '@angular/forms';
   styleUrls: ['./contact-us.component.scss'],
 })
 export class ContactUsComponent implements OnInit{
-  contactus!: FormGroup;
-  constructor(){}
-  ngOnInit(): void {
- this.contactus =new FormGroup({
+    
+  myform!: FormGroup;
 
-  })  
-}
+  
+  ngOnInit(): void {
+   this.myform=new FormGroup({
+      User_name: new FormControl(''),
+      User_email:new FormControl('',),
+      Subject_Purpose:new FormControl(''),
+      User_Massage:new FormControl('')
+    })
+  }
+
 }

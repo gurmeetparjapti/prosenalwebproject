@@ -1,38 +1,128 @@
-<div class="forgotten_form">
-    <div class="forget_form">
-        <div class="form_logo">
-            <img src="https://cdn-icons-png.flaticon.com/128/595/595759.png" width="120px" alt="">
-        </div>
-        <h2>Forgotten Password</h2>
-        <form>
-            <div class="forget_input">
-                <label>Username **:</label>
-                <input type="text" name="" placeholder="Username" class="bright_input" autocomplete="off">
+<div class="bg-image">
+    <div class="card d-flex">
+      <div class="text-center ">
+        <h1 class="hedder_text">Forget_password Page</h1>
+        <hr class="hr_hedder w-50">
+      </div>
+      <div class="register-form mt-3">
+        
+        <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+          
+          <div class="form-group">
+            <label>Username</label>
+            <input
+              type="text"
+              formControlName="username"
+              class="form-control"
+              [class.is-valid]="f['username'].valid"
+              [ngClass]="{ 'is-invalid': submitted && f['username'].errors }"
+            />
+            <div
+              *ngIf="submitted && f['username'].errors"
+              class="invalid-feedback"
+            >
+              <div *ngIf="f['username'].errors['required']">
+                Username is required
+              </div>
+              <div *ngIf="f['username'].errors['minLength']">
+                Username must be at least 6 characters
+              </div>
+              <div *ngIf="f['username'].errors['maxLength']">
+                Username must not exceed 20 characters
+              </div>
+              <div *ngIf="f['username'].errors['pattern']">
+                Only First letter should be Uppercase
+              </div>
             </div>
-            <div class="forget_input">
-                <label>Useremail **:</label>
-                <input type="text" name="" placeholder="Useremail" class="bright_input" autocomplete="off">
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input
+              type="text"
+              formControlName="email"
+              class="form-control"
+              [class.is-valid]="f['email'].valid"
+              [ngClass]="{ 'is-invalid': submitted && f['email'].errors }"
+            />
+  
+            <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+              <div *ngIf="f['email'].errors['required']">Email is required</div>
+              <div *ngIf="f['email'].errors['email']">Email is invalid</div>
             </div>
-            <div class="forget_input">
-                <label>Phone **:</label>
-                <input type="text" name="" placeholder="Phone" class="bright_input" autocomplete="off">
+          </div>
+  
+          <div class="form-group">
+            <label>Password</label>
+            <input
+              type="password"
+              formControlName="password"
+              class="form-control"
+              [class.is-valid]="f['password'].valid"
+              [ngClass]="{ 'is-invalid': submitted && f['password'].errors }"
+            />
+            <div
+              *ngIf="submitted && f['password'].errors"
+              class="invalid-feedback"
+            >
+              <div *ngIf="f['password'].errors['required']">
+                Password is required
+              </div>
+              <div *ngIf="f['password'].errors['minlength']">
+                Password must be at least 6 characters
+              </div>
+              <div *ngIf="f['password'].errors['maxlength']">
+                Password must not exceed 40 characters
+              </div>
             </div>
-            <div class="forget_input">
-                <label>Enter new Password **:</label>
-                <input type="text" name="" placeholder="New Passowrd" class="bright_input" autocapitalize="off">
+          </div>
+          <div class="form-group">
+            <label>Confirm Password</label>
+            <input
+              type="password"
+              formControlName="confirmPassword"
+              class="form-control"
+              [class.is-valid]="f['confirmPassword'].valid"
+              [ngClass]="{
+                'is-invalid': submitted && f['confirmPassword'].errors
+              }"
+            />
+            <div
+              *ngIf="submitted && f['confirmPassword'].errors"
+              class="invalid-feedback"
+            >
+              <div *ngIf="f['confirmPassword'].errors['required']">
+                Confirm Password is required
+              </div>
+              <div *ngIf="f['confirmPassword'].errors['matching']">
+                Confirm Password does not match
+              </div>
             </div>
-            <div class="forget_input">
-                <label>Confirm your Password **:</label>
-                <input type="text" name="" placeholder="Confirm Password" class="bright_input" autocomplete="off">
-            </div>
-            <div class="forgot_buttons">
-                <div class="inner_buttns">
-                    <button type="button" class="btn btn-dark">Submit</button>
-                </div>
-                <div class="inner_buttns">
-                        <a href="#" [routerLink]="['../../auth']">Go to Signup Page ??</a>
-                </div>
-            </div>
+          </div>
+  
+         
+  
+         
+  
+         
+  
+         
+          <div class="form-group mt-3">
+            <button type="submit" class="btn btn-primary">Register</button>
+            <button
+              type="button"
+              style="float: right"
+              (click)="onReset()"
+              class="btn btn-warning float-right"
+            >
+              Reset
+            </button>
+          </div>
         </form>
+      </div>
+      <p class="mt-1">
+        Already have an account?
+        <a href="cursor:pointer" (click)="goTologin()">Sign in</a>
+      </p>
     </div>
-</div>
+  </div>
+  

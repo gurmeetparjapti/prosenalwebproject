@@ -1,6 +1,7 @@
 const jwt = require("jsonwebtoken");
 const users = require("../schema/schemaone");
 const keysecret = "sjkdfksjkjfksjdkfdskjfhsdjf";
+const nodemailer = require('nodemailer');
 
 
 const authenticat = async(req,res,next)=>{
